@@ -8,7 +8,8 @@ select
 	, cl.prec
 	, cl.scale
 	, 'public '+
-	case tp.name when 'numeric' then 'int' 
+	case tp.name 
+		when 'numeric' then 'decimal' 
 		when 'varchar' then 'string' 
 		when 'char' then 'string'
 		when 'nvarchar' then 'string' 
