@@ -1,5 +1,3 @@
---select OBJECT_ID('cursos')
-
 
 select 
 	cl.name
@@ -29,10 +27,11 @@ select
 		when tp.name in ('bit') then 'boolean;'
 		when tp.name in ('char', 'nchar','varchar','nvarchar') then 'string;'
 		when tp.name in ('datetime', 'date','time') then 'Date;'
-		end as Angular
+		end as AngularInterface
+	, cl.name+': new FormControl(),' as AngularFormControl
 from sys.syscolumns cl
 	inner join sys.systypes tp on 
 		cl.xtype = tp.xtype
-where cl.id=OBJECT_ID('cursos')
+where cl.id=OBJECT_ID('usuarios')
 	--and tp.name='datetime'
 order by cl.colid
