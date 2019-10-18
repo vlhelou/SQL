@@ -1,5 +1,6 @@
 select
     tables.object_id
+	, SCHEMA_NAME(tables.schema_id) esquema
     , tables.name
     , format(avg(rows),'N0','pt-br') as Registros
     , format( sum(user_seeks+user_scans+user_lookups),'N0','pt-br') as Leituras
@@ -17,6 +18,7 @@ from sys.tables
 
 --where [rows]=0
 group BY
+	 SCHEMA_NAME(tables.schema_id),
     tables.object_id
     , tables.name
 having avg(rows)>0
