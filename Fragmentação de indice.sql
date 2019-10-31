@@ -1,4 +1,5 @@
-SELECT dbschemas.[name] as 'Schema',
+SELECT 
+	dbschemas.[name] as 'Schema',
 	dbtables.[name] as 'Table',
 	dbindexes.[name] as 'Index',
 	indexstats.avg_fragmentation_in_percent,
