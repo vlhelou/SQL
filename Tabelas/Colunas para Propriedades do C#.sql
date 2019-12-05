@@ -34,6 +34,7 @@ select
 from sys.syscolumns cl
 	inner join sys.systypes tp on 
 		cl.xtype = tp.xtype
-where cl.id=OBJECT_ID('LMS_LogTreinamento_OnLine')
-	--and tp.name='datetime'
+where 
+	cl.id=OBJECT_ID('LMSE_FBKRESPOSTADEPERGUNTA')
+	and tp.name!='sysname'
 order by cl.colid
