@@ -16,6 +16,3 @@ where
 order by logdet.start_time desc
 
 
---msdb.dbo.sysmaintplan_logdetail: FK_sysmaintplan_log_detail_task_id
-
---The process cannot access the file 'G:\\DB_BACKUPS\\@REP\\MANUTENCAO_LOG_20200217024007.txt' because it is being used by another process.
