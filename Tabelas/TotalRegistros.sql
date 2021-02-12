@@ -1,3 +1,5 @@
+--Origem https://blog.sqlauthority.com/2021/02/12/sql-server-list-tables-with-size-and-row-counts/?utm_source=rss&utm_medium=rss&utm_campaign=sql-server-list-tables-with-size-and-row-counts
+
 SELECT
 t.NAME AS TableName,
 SUM(p.rows) AS RowCounts,
